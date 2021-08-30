@@ -12,17 +12,15 @@ mongoose
   })
   .catch((e) => console.log("mongoDB connect failed", e));
 
-let app = express()
+let app = express();
 app.use(express.urlencoded());
 app.use(express.json());
-let port = process.env.PORT || 8080
+let port = process.env.PORT || 8080;
 
 let listenerCallback = () => {
-    console.log(port)
-}
+  console.log(port);
+};
 
-app.listen(port,listenerCallback)
+app.listen(port, listenerCallback);
 
-app.use("/api",UserDetails)
-
-
+app.use("/api", UserDetails);
