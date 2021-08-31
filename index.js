@@ -6,7 +6,10 @@ let URL = "mongodb+srv://admin:admin@cluster0.u7bde.mongodb.net/demo";
 
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(URL)
+  .connect(URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => {
     console.log("mongoDB connected");
   })
