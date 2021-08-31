@@ -26,5 +26,9 @@ app.listen(port, listenerCallback);
 app.use("/api", UserDetails);
 
 app.get('/',(req,res) => {
+  var ip = req.headers['x-forwarded-for'] ||
+     req.socket.remoteAddress ||
+     null;
+     console.log(ip)
   res.send("This is a sample express app")
 })
