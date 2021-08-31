@@ -12,8 +12,9 @@
             "dest":"/"
         },
         {
-            "src":"/(.*)",
-            "dest":"/api"
+            "src":"/api",
+            "dest":"/index.js",
+            "methods":["GET","POST"]
         }
     ]
 }
