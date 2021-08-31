@@ -24,3 +24,7 @@ let listenerCallback = () => {
 app.listen(port, listenerCallback);
 
 app.use("/api", UserDetails);
+
+app.get('/',(req,res) => {
+  res.send("This is a sample express app")
+})
