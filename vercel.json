@@ -13,7 +13,7 @@
         },
         {
             "src":"/api/userdetail/getuserdetail",
-            "dest":"/controller/userdetailscontroller.js",
+            "dest":"/index.js",
             "methods":["GET","POST"]
         }
     ]
