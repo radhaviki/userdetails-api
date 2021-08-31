@@ -4,12 +4,12 @@ import userSchema from "../model/userDetail.js";
 let UsersRoutes = express.Router();
 
 UsersRoutes.route("/userdetail/getuserdetail").get((request, responce) => {
-  userSchema.find({}, function (err, user) {
-    if (err) responce.send(err);
-    console.log("inside getuserdetails ...", user);
-    responce.json(user);
-  });
-
+  // userSchema.find({}, function (err, user) {
+  //   if (err) responce.send(err);
+  //   console.log("inside getuserdetails ...", user);
+  //   responce.json(user);
+  // });
+  responce.json({status:200});
 });
 
 UsersRoutes.route("/userdetail/save").post((req,res) => {
